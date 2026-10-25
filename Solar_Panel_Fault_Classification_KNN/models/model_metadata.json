@@ -1,0 +1,66 @@
+{
+  "project": "Solar Panel Fault Classification using KNN",
+  "dataset_type": "synthetic educational dataset; not field measurements",
+  "input_features": [
+    "irradiance_W_m2",
+    "module_temp_C",
+    "dc_voltage_V",
+    "dc_current_A",
+    "dc_power_W",
+    "fill_factor",
+    "insulation_resistance_MOhm",
+    "voltage_ripple_V",
+    "current_imbalance_pct",
+    "temperature_rise_C",
+    "operating_mode"
+  ],
+  "numeric_features": [
+    "irradiance_W_m2",
+    "module_temp_C",
+    "dc_voltage_V",
+    "dc_current_A",
+    "dc_power_W",
+    "fill_factor",
+    "insulation_resistance_MOhm",
+    "voltage_ripple_V",
+    "current_imbalance_pct",
+    "temperature_rise_C"
+  ],
+  "categorical_features": [
+    "operating_mode"
+  ],
+  "classes": [
+    "Normal",
+    "Open_Circuit",
+    "Overheating",
+    "Partial_Shading",
+    "Short_Circuit",
+    "Soiling"
+  ],
+  "best_parameters": {
+    "knn__n_neighbors": 7,
+    "knn__p": 1,
+    "knn__weights": "distance",
+    "select__k": 10
+  },
+  "cv_macro_f1": 0.9544273633779222,
+  "test_metrics": {
+    "accuracy": 0.9466666666666667,
+    "balanced_accuracy": 0.9466666666666668,
+    "precision_macro": 0.9477401837928153,
+    "recall_macro": 0.9466666666666668,
+    "f1_macro": 0.9470179278715865,
+    "f1_weighted": 0.9470179278715863,
+    "mcc": 0.9360780097513545
+  },
+  "test_size": 0.2,
+  "random_state": 42,
+  "cleaning": {
+    "rows_before": 6025,
+    "rows_after": 6000,
+    "duplicates_removed": 25
+  },
+  "n_samples_after_duplicate_removal": 6000,
+  "n_train": 4800,
+  "n_test": 1200
+}

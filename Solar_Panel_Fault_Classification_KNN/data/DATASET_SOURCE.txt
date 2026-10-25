@@ -1,0 +1,13 @@
+DATASET SOURCE AND PROVENANCE
+
+File: solar_pv_faults_synthetic.csv
+Source type: Self-generated synthetic educational dataset.
+Generator: src/generate_dataset.py
+Random seed: 42
+Base observations: 6,000 (1,000 per class); the CSV additionally contains 25 intentional duplicate records.
+Classes: Normal, Partial_Shading, Soiling, Open_Circuit, Short_Circuit, Overheating.
+Features: ten numeric electrical/thermal indicators plus operating_mode categorical feature.
+
+This dataset is engineering-inspired, created for demonstrating the complete ML workflow, and is NOT collected from real solar panels or a field installation. It is not evidence of real-world fault detection performance. The project assignment permits publicly available OR self-generated data. For deployment or a research claim, replace it with measured PV data and validate on an independent site/experiment.
+
+Dataset source code is included at src/generate_dataset.py.
